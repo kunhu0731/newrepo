@@ -5,9 +5,9 @@
 
 ## 環境設置
 ### Python 環境
-- 使用 conda 環境：`data_analysis_1_3`
+- 使用 conda 環境：`data_repo_1`
 - Python 版本：3.12.11
-- 執行前必須啟動環境：`conda activate data_analysis_1_3`
+- 執行前必須啟動環境：`conda activate data_repo_1`
 
 ### 依賴套件
 主要套件（詳見 `requirements.txt`）：
@@ -26,7 +26,7 @@ lesson21/
 ## 開發工作流程
 1. **環境準備**：
    ```bash
-   conda activate data_analysis_1_3
+   conda activate data_repo_1
    ```
 
 2. **安裝依賴**：
