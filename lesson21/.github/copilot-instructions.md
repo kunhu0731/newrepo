@@ -1,37 +1,51 @@
-# Copilot 專案指南
+# Copilot 指令（針對 lesson21）
+
+## 專案概述
+這是一個 Flask Web 應用專案，並配置了 SQLite 資料庫。
+
+## 環境設置
+### Python 環境
+- 使用 conda 環境：`data_analysis_1_3`
+- Python 版本：3.12.11
+- 執行前必須啟動環境：`conda activate data_analysis_1_3`
+
+### 依賴套件
+主要套件（詳見 `requirements.txt`）：
+- Flask 3.0.2
+- Flask-SQLAlchemy 3.1.1
+- python-dotenv 1.0.1
 
 ## 專案架構
-此專案是一個 Python 學習專案，包含以下主要組件：
-- `lesson21.ipynb`: Jupyter notebook 檔案，用於互動式學習
-- `lesson21_2.py`: Python 腳本檔案
-- `AGENTS.md`: 環境設定說明文件
+```
+lesson21/
+├── app.py              # Flask 應用主程式
+├── requirements.txt    # 相依套件列表
+└── site.db            # SQLite 資料庫檔案（執行時自動生成）
+```
 
-## 開發環境設定
-1. 專案使用 Conda 環境管理
-2. 主要的 Conda 環境為 `data_repo_1`
-3. 在執行任何 Python 檔案前，請先啟動 Conda 環境：
+## 開發工作流程
+1. **環境準備**：
    ```bash
-   conda activate data_repo_1
+   conda activate data_analysis_1_3
    ```
 
-## 檔案執行方式
-- Python 腳本執行：
-  ```bash
-  python lesson21_2.py
-  ```
-- Jupyter Notebook：
-  使用 VS Code 的 Jupyter 擴充功能直接開啟並執行 `lesson21.ipynb`
+2. **安裝依賴**：
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. **執行應用**：
+   ```bash
+   python app.py
+   ```
+
+## 資料庫設定
+- 使用 SQLite 作為資料庫
+- 資料庫檔案位置：`site.db`
+
 
 ## 注意事項
-1. 確保使用正確的 Conda 環境
-2. 在執行 Jupyter Notebook 時，kernel 應設定為 `data_repo_1` 環境
+- 開發模式已啟用（debug=True）
+- 應用程式預設運行在 http://localhost:5000
+- 資料庫相關的模型應定義在 `app.py` 中
 
-## 專案慣例
-1. 檔案命名：使用小寫字母與底線分隔
-2. Python 檔案應包含適當的註釋說明
-3. 環境相關設定統一記錄在 `AGENTS.md` 中
-
-若需更新此說明文件，請確保包含：
-- 新增的環境依賴
-- 新的執行命令或工作流程
-- 重要的程式碼模式或慣例
